@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MENU</title>
+        <style type="text/css"> 
+            @font-face{
+                font-family: 'Vecna';
+                src: url('../fuente/Vecna.otf');
+            }
+            body { 
+                font-family:'Vecna';
+                background-attachment: fixed;
+                background-position: center center;
+                background-size: cover;
+                background-image: url("imagenes/intro.png");
+            }
+            #continuar{
+                position:absolute;
+                color:white;
+                top:850px;
+                left:1205px;
+                font-size:40px;
+                /*border:1px white solid;*/
+            }
+        </style>
+</head>
+<body>
+    <div id="continuar" onclick="empezar()">Continuar</div>
+    <script>
+    function empezar(){
+            aleatorio = Math.round(Math.random() * (8 - 0) + 0);
+            //aleatorio=2;
+            var paginas=["../aldeano/aldeano.php","../bruja/bruja.php","../dragon/dragon.php","../duende/duende.php","../ent/ent.php","../hada/hada.php","../mimico/mimico.php","../orco/orco.php","../viajero/viajero.php"];
+            window.open(paginas[aleatorio],"_self","");
+        }
+    </script>
+</body>
+</html>
